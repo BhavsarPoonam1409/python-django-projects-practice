@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for i in nested_condition %}
+        {% if i|divisibleby:2 %}
+            <p style="color: blue;">{{i}}</p>
+                {% elif not i|divisibleby:2 %}
+                    <p style="color: chartreuse;">{{i}}</p>
+                         {% elif i == 5 %}
+                            <p style="color: blueviolet; background-color: aquamarine;">{{i}}</p>
+
+        {% endif %}
+    {% endfor %}
+</body>
+</html>

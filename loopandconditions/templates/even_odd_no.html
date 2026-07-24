@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even and odd no</title>
+</head>
+<body>
+    <center><h1 style="color: darkorange;"> Odd and Even No find </h1></center>
+    {% for i in even_odd %}
+        {% if i|divisibleby:2 %}
+            <p style="color: blue;">{{i}}</p>
+                
+        {% endif %}
+    {% endfor %}
+
+    <!-- for odd no find
+        {% for i in even_odd %}
+            {% if not i|divisibleby:2 %}
+                <p>{{i}}</p>
+            {% endif %}
+        {% endfor %}
+    -->
+</body>
+</html>
