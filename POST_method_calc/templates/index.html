@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator program</title>
+</head>
+<body>
+    <h1 style="color: blue;"><center>Calc Program</center></h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        Number 1:
+        <input type="number" name="num1"><br><br>
+        Number 2:
+        <input type="number" name="num2" id=""><br><br>
+
+        <input type="submit" name="calc" value="+"><br>
+        <input type="submit" name="calc" value="-"><br>
+        <input type="submit" name="calc" value="*"><br>
+        <input type="submit" name="calc" value="/"><br>
+    </form>
+    <h1>Ans is: {{ans}}</h1>
+</body>
+</html>
