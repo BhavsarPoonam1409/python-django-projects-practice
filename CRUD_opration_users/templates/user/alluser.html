@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="lightyellow">
+    <h2>ALL USERS </h2><br>
+    
+    <a href="/user/adduser/"><button style="color: white; background-color: darkviolet;">ADD new user</button></a><br><br>
+
+
+    <!-- <p>{{alluser}}</p> -->
+    <table border="2">
+        <td>ID</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Number</td>
+        <td>Gender</td>
+        <td>Delete</td>
+        <td>Update</td>
+        {% for i in alluser %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td><a href="singleuser/{{i.id}}">{{i.name}}</a></td>
+            <td>{{i.age}}</td>
+            <td>{{i.number}}</td>
+            <td>{{i.gender}}</td>
+            <td><a href="/user/deleteuser/{{i.id}}"><button style="background-color: red;">delete</button></a></td>
+            <td><a href="/user/updateuser/{{i.id}}"><button style="background-color: green;">Update</button></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
