@@ -1,0 +1,56 @@
+*{
+    text-align: center;
+    background-color:lightpink;
+}
+
+/* body {
+    background-color: lightpink;
+    border: 4px solid darkblue;
+    border-radius: 10px;
+    margin: 10px;
+} */
+body {
+    background-color: lightpink;
+    border: 4px solid darkblue;
+    border-radius: 10px;
+    margin: 5px;
+    min-height: calc(100vh - 10px);
+    box-sizing: border-box;
+}
+
+h1{
+    color: rgb(0, 3, 7);
+    background-color: lightcoral;
+    text-align: center;
+}
+
+h4{
+    /* background-color: lightgreen; */
+    color: darkblue;
+    text-align: center;
+}
+button{
+    background-color: rgb(244, 95, 117);
+    color: rgb(0, 0, 62);
+    border-color: darkkhaki;
+    width: 90px;
+    height: 30px;
+    font-size: 20px;
+    
+}
+
+textarea {
+    background-color: rgb(249, 167, 209);
+    border: 2px solid rgb(13, 244, 156);
+    width: 600px;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+
+textarea::placeholder{
+    /* background-color: rgb(70, 205, 8); */
+    color: rgb(5, 25, 244);
+    font-size: 20px;
+}
+

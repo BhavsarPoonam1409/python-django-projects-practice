@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-AI</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/index.css' %}"> -->
+</head>
+<body>
+    <h1>My AI Assistance</h1>
+ 
+    <form action="" method="post">
+        {% csrf_token %}
+    
+    <textarea name="question" placeholder="Enter Your Text" rows="10" cols="50" id=""></textarea><br><br>
+    <button type="submit">submit</button>
+    </form>
+
+    <h4>--Poonam Bhavsar</h4>
+
+    {% if ans %}
+    <p>{{ans}}</p>
+    {% endif %}
+</body>
+</html>
