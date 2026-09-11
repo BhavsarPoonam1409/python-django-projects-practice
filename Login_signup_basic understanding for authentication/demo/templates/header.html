@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawMart - Premium Pet Supplies</title>
+    <link rel="stylesheet" href={% static 'css/index.css' %}>
+    <link rel="stylesheet" href={% static 'css/contact.css' %}>
+
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="logo">🐾 PawMart</a>
+            <ul class="nav-links">
+                <li><a href="#">Dogs</a></li>
+                <li><a href="#">Cats</a></li>
+                <li><a href="#">Birds</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="services/">Services</a></li>
+                <li><a href="{% url 'about'%}">About us</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
+            </ul>
+            <a href="#" class="cart-icon">🛒 Cart (0)</a>
+        </nav>
+    </header>

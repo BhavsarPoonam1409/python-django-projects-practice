@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Fac</h1>
+
+    <a href="/fuculties/add"><button>ADD new user</button></a>
+
+    <table>
+        {% for i in facusers%}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.fullname}}</td>
+            <td>{{i.mobile}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.age}}</td>
+            <td><a href='/fuculties/delete/{{i.id}}' > <button style="background-color: red">delete</button></a></td>
+            <td><a href='/fuculties/update/{{i.id}}' > <button style="background-color: rgb(60, 118, 216)">Update</button></a></td>
+        </tr>
+        {% endfor %}
+        
+        
+    </table>
+</body>
+</html>

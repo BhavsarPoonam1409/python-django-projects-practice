@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Update a User</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" value="{{studata.image}}" name="image" placeholder="Enter your image ">  <br> <br>
+        <input type="text" value="{{studata.name}}" name="name" placeholder="Enter your name "> <br> <br>
+        <input type="text" value="{{studata.age}}" name="age" placeholder="Enter your age "> <br> <br>
+        <input type="text" value="{{studata.mobile}}" name="mobile" placeholder="Enter your Mobile "> <br> <br>
+        <input type="text" value="{{studata.gender}}" name="gender" placeholder="Enter your Gender "> <br> <br>
+
+        <input type="submit">
+    </form>
+</body>
+</html>

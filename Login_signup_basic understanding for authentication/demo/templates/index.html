@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero">
+            <h1>Everything Your Pet Loves</h1>
+            <p>Premium food, toys, and accessories delivered to your doorstep.</p>
+            <a href="#products" class="btn-shop">Shop Best Sellers</a>
+        </section>
+
+        <!-- Product Grid Section -->
+        <section class="container" id="products">
+            <h2 class="section-title">Featured Pet Essentials</h2>
+            <div class="grid">
+
+                {% for i in allprod %}
+                    <article class="card">
+                        <div class="card-img">
+                            <img height="250" src="{{i.image}}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">{{i.name}}</h3>
+                            <div class="card-price">${{i.price}}</div>
+                            <button class="btn-add">Add to Cart</button>
+                        </div>
+                     </article>
+                {% endfor %}
+                
+               
+                
+
+                
+            </div>
+        </section>
+    </main>
+
+ {% endblock %}
