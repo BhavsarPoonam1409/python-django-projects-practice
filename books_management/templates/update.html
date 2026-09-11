@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Add update a books</h1>
+    <form method="post">
+        {% csrf_token %}
+    <input type="text" name="bname" value="{{booksdata.book_name}}" placeholder="Enter your BookName"><br><br>
+    <input type="text" name="bimage" value="{{booksdata.book_image}}" placeholder="Enter your book_image "><br><br>
+    <input type="text" name="aname" value="{{booksdata.author_name}}" placeholder="Enter your author_name"><br><br>
+    <input type="number" name="price" value="{{booksdata.price}}" placeholder="Enter your price"><br><br>
+    <input type="text" name="desc" value="{{booksdata.desc}}" placeholder="Enter your desc"><br><br>
+
+    <input type="submit">
+    </form>
+</body>
+</html>

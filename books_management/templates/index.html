@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Managemnet System</title>
+</head>
+<body>
+    <h1 style="color: blue;">Book Managemnet System</h1>
+    
+    <a href="/books/add"><button>ADD new Books</button></a><br><br>
+
+    <table border="2">
+        <tr>
+            
+            <td>BookName</td>
+            <td>BookImage</td>
+            <td>AuthorName</td>
+            <td>price</td>
+            <td>desc</td>
+            <td>Delete</td>
+            <td>Update</td>
+        </tr>
+
+        {% for i in Booksdata %}
+            <tr>
+                <td>{{i.book_name}}</td>
+                <td><img src="{{i.book_image}}" height="50" width="50" alt=""></td>
+                <td>{{i.author_name}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.desc}}</td>
+                <td><a href='/books/delete/{{i.id}}' > <button style="background-color: red">delete</button></a></td>
+                <td><a href='/books/update/{{i.id}}' > <button style="background-color: rgb(248, 81, 225)">update</button></a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
