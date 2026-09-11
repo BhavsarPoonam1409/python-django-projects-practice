@@ -22,6 +22,7 @@ This repository contains my Python and Django practice projects created during m
 - SQLite Database
 - Bootstrap Integration
 - model form to create forms.py and CRUD operations create
+- Header and Footer using include and extends.
 
 ## 📂 Repository Structure
 
